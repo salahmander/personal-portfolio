@@ -4,7 +4,6 @@ import { About } from "./Sections/About/About";
 import { Contact } from "./Sections/Contact/Contact";
 import { Hero } from "./Sections/Hero/Hero";
 import { Portfolio } from "./Sections/Portfolio/Portfolio";
-import { Services } from "./Sections/Services/Services";
 
 const App = () => {
   return (
@@ -12,7 +11,6 @@ const App = () => {
       <Header />
       <Hero />
       <About />
-      <Services />
       <Portfolio />
       <Contact />
       <Footer />

@@ -1,0 +1,22 @@
+{
+    "portfolio": {
+        "title": "Portfolio",
+        "subTitle": "My Latest Portfolio",
+        "personal": {
+            "title": "Personal Projects",
+            "description": "Showcasing creativity and problem-solving through passion-driven projects."
+        },
+        "challenges": {
+            "title": "Challenges & Experiments",
+            "description": "Exploring new tech, solving puzzles, and continuous learning."
+        },
+        "commissioned": {
+            "title": "Commissioned Work",
+            "description": "Professional projects delivered for clients and businesses."
+        },
+        "clones": {
+            "title": "Website Clones",
+            "description": "Replicating popular websites to refine skills and techniques."
+        }
+    }
+}

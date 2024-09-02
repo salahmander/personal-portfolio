@@ -1,0 +1,11 @@
+{
+    "hero": {
+        "greeting": "Hello,",
+        "introduction": {
+            "prefix": "I'm",
+            "name": "Salah Abdo"
+        },
+        "expertise": "Software Engineer",
+        "description": "A proficient Software Engineer that excels in React, TypeScript, JavaScript, and Python. A proven history of delivering high-quality software solutions both independently and collaboratively."
+    }
+}

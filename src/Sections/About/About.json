@@ -1,0 +1,105 @@
+{
+    "about": {
+        "title": "About Me",
+        "subTitle": "Know more",
+        "summary": "I’m a skilled Software Engineer with a degree in Computer Science, specialising in React, TypeScript, JavaScript, and Python. I have a proven track record of delivering high-quality software solutions, whether working independently or as part of a team. My strong grounding in computer science principles, combined with a passion for problem-solving, enables me to tackle complex challenges with confidence and efficiency.",
+        "skillsSection": {
+            "title": "Skills",
+            "skills": [
+                {
+                    "title": "React",
+                    "category": "",
+                    "text": ""
+                },
+                {
+                    "title": "Javascript/TypeScript",
+                    "category": "",
+                    "text": ""
+                },
+                {
+                    "title": "Python",
+                    "category": "",
+                    "text": ""
+                },
+                {
+                    "title": "Testing/TDD",
+                    "category": "",
+                    "text": ""
+                },
+                {
+                    "title": "HTML/CSS",
+                    "category": "",
+                    "text": ""
+                },
+                {
+                    "title": "Tailwind",
+                    "category": "",
+                    "text": ""
+                }
+            ]
+        },
+        "experienceSection": {
+            "title": "Experience",
+            "experience": [
+                {
+                    "jobTitle": "Director - Software Engineer",
+                    "company": "Umbra Creations",
+                    "year": "Jul 2024 - Current",
+                    "achievements": []
+                },
+                {
+                    "jobTitle": "Frontend Engineer",
+                    "company": "Motorway",
+                    "year": "Apr 2022 - Aug 2024",
+                    "achievements": [
+                        "Focused on the vehicle profiling journey, managed both the photos app and the main seller app where customers prepared their vehicles for auction by providing detailed vehicle information, photos, and any damages.",
+                        "Led development of an AI-powered image assistance feature that reduced the resupply request rate from 13% to 6% in the first month, with an 87% compliance rate among sellers for reuploading flagged photos, utilising React, WebSockets, and TypeScript.",
+                        "Led the enhancement of vehicle profiling and seller communication, improving visibility on vehicle checks and sale listings through comprehensive documentation, integration of custom libraries, and cross-platform technical design sessions. Collaborated with key stakeholders to proactively mitigate risks, resulting in a 65% increase in first-time resolution of inquiries, indicating significantly more efficient communication and streamlined process handling.",
+                        "Successfully led proof-of-concept, and worked on Minimum Viable Product development for revamping the photos web app service. Identified challenges, devised solutions, and integrated Google Analytics tags, achieving a damage declaration increase from 63% to 69%, user retention rise from 76% to 88%, and improved code coverage on SonarCloud from 0% to 60%. Ensured a smooth release with no major incidents or negative feedback.",
+                        "Utilised tools such as DataDog to create comprehensive dashboards for tracking error rates, release-specific error rates, warnings, network issues, failure rates, and feature monitoring. The expanded visibility from these dashboards directly informed the work to reduce the error rate by 30%.",
+                        "Designed engineering guides and process documents to streamline onboarding, and assisted in creating detailed documentation on review app creation, staging, and production deployment.",
+                        "Actively contributed to the recruitment process by reviewing take-home assignments, participating in live coding interviews, and cultural interviews."
+                    ]
+                },
+                {
+                    "jobTitle": "Software Engineer",
+                    "company": "Level Prime - Honda",
+                    "year": "Jan 2021 - April 2022",
+                    "achievements": [
+                        "Spearheaded the enhancement of the graphical graph editor for Honda R&D Germany, now a global standard across 12 Honda R&D institutes, leveraging expertise in React, Redux, and JavaScript.",
+                        "Conducted in-depth research and validation of innovative tools and technologies, presenting actionable insights to senior department heads at Honda R&D Germany for integration into the graphical graph editor.",
+                        " Directed the creation of a cutting-edge feature for assessing subjective quality metrics of over 200 vehicles, utilising a custom-designed layered hybrid aster plot, implemented with React, Redux, Plotly.js, and Python."
+                    ]
+                },
+                {
+                    "jobTitle": "Full Stack Software Engineer",
+                    "company": "BullionByPost",
+                    "year": "Sep 2019 - Dec 2020",
+                    "achievements": [
+                        "Maintained and developed JQBs' multi-national E-commerce site and internal admin interface using Python (Django), PostgreSQL, CircleCI, JavaScript, HTML, and Sass. Implemented and updated application modules in coordination with Senior Software Engineers, coded software changes according to design specifications, and utilized code conversion tools proficiently"
+                    ]
+                },
+                {
+                    "jobTitle": "System Engineer Intern",
+                    "company": "Forcia - FORVIA",
+                    "year": "Aug 2017 - Aug 2018",
+                    "achievements": [
+                        "Oversaw daily operations of network and IT systems, including database management, data processing, and user support at the assigned BMW Mini facility.",
+                        "Ensured security indicator maintenance and improvement, consistently meeting 90% KPI targets.",
+                        "Effectively prioritised tasks to optimise 30-minute work windows, ensuring 100% system functionality"
+                    ]
+                }
+            ]
+        },
+        "educationSection": {
+            "title": "Education & Certification",
+            "education": [
+                {
+                    "subject": "Bachelor of Science - Computer Science",
+                    "address": "Coventry University",
+                    "year": "2015 — 2019"
+                }
+            ]
+        }
+    }
+}

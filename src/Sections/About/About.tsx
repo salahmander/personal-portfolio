@@ -1,89 +1,10 @@
 import { useState } from "react";
 import { SectionTitle } from "../../Components/SectionTitle/SectionTitle";
+import { MDText } from "i18n-react";
 
-const aboutData = [
-  {
-    title: "Main Skills",
-    skills: [
-      {
-        title: "User experience design",
-        category: "UI/UX",
-        text: "Delight the user and make it work.",
-      },
-      {
-        title: "Web and user interface design",
-        category: "Development",
-        text: "Websites, web experiences, ...",
-      },
-      {
-        title: "Interaction design",
-        category: "Animation",
-        text: "I like to move it move it.",
-      },
-    ],
-  },
-  {
-    title: "Experience",
-    experience: [
-      {
-        jobTitle: "Sr. Front-end Engineer",
-        company: "Google",
-        year: "2018 - Current",
-      },
-      {
-        jobTitle: "Front-end Engineer",
-        company: "Microsoft",
-        year: "2017 - 2018",
-      },
-      {
-        jobTitle: "Software Engineer",
-        company: "Alibaba",
-        year: "2013 - 2014",
-      },
-    ],
-  },
-  {
-    title: "Contacts",
-    contacts: [
-      {
-        title: "name",
-        content: "Rezareo Sem",
-      },
-      {
-        title: "Email",
-        content: "rezareo343@gmail.com",
-      },
-      {
-        title: "Phone",
-        content: "+8801734909372",
-      },
-      {
-        title: "Location",
-        content: "Dhaka, Bangladesh",
-      },
-    ],
-  },
-  {
-    title: "Education & Certification",
-    certificates: [
-      {
-        subject: "BSc In CSE",
-        address: "ABC University, Los Angeles, CA",
-        year: 2010,
-      },
-      {
-        subject: "Diploma in Computer Science",
-        address: "Gamma Technical Institute",
-        year: 2009,
-      },
-      {
-        subject: "Graphic Designer",
-        address: "ABC Institute, Los Angeles, CA",
-        year: 2007,
-      },
-    ],
-  },
-];
+import LocalTexts from "./About.json";
+
+const LocalT = new MDText(LocalTexts);
 
 export const About = () => {
   const [activeInx, setActiveInx] = useState(0);
@@ -92,35 +13,29 @@ export const About = () => {
     setActiveInx(index !== activeInx ? index : index);
   };
 
+  const aboutTabs = [
+    LocalTexts.about.skillsSection.title,
+    LocalTexts.about.experienceSection.title,
+    LocalTexts.about.educationSection.title,
+  ];
+
   return (
     <section className={`about pt-section px-paddingX`} id="about">
       <div className={`container`}>
         <SectionTitle
-          title="About Me"
-          subTitle="Know more"
+          title={LocalT.translate("about.title") as string}
+          subTitle={LocalT.translate("about.subTitle") as string}
           underline={true}
           align="start"
         />
 
         <div className="innerAbout flex gap-10 mt-10 flex-col overflow-hidden md:flex-row-reverse">
-          <div className="right img w-full md:w-1/3">
-            <img
-              src="../assets/portfolio_2/about.png"
-              alt="hero img"
-              className="w-full max-w-xs mx-auto"
-            />
-          </div>
-          <div className="left w-full md:w-2/3">
-            <p className="aboutText">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut
-              molestiae dolor necessitatibus porro ut dolore nihil tempore
-              aperiam, reprehenderit totam at dolores! Fugit velit cupiditate
-              mollitia eaque enim omnis quibusdam veniam, esse, iure distinctio
-              nihil et repellendus perferendis pariatur sequi iusto sit, tenetur
-              neque ab eveniet. Fuga, inventore non!
+          <div className="left w-full">
+            <p className="aboutText w-2/3">
+              {LocalT.translate("about.summary")}
             </p>
             <div className="btn-wrapper flex gap-4 items-center mt-6 flex-wrap">
-              {aboutData.map((b, index) => (
+              {aboutTabs.map((tabTitle, index) => (
                 <div key={index} data-cursor="blow_link" className="btn">
                   <button
                     type="button"
@@ -131,7 +46,7 @@ export const About = () => {
                     } font-semibold transition-all duration-300 text-lg`}
                     onClick={() => handleActiveInx(index)}
                   >
-                    {b.title}
+                    {LocalT.translate(tabTitle)}
                   </button>
                   <div
                     className={`${
@@ -147,19 +62,23 @@ export const About = () => {
             {activeInx === 0 && (
               <div className="pane skills mt-8">
                 <ul className="flex flex-col">
-                  {aboutData[0].skills?.map((item, index) => (
-                    <li className="mb-5" key={index}>
-                      <div>
-                        <h4 className="text-gray_300 text-lg capitalize">
-                          <span className="font-semibold">{item.title}</span>{" "}
-                          <span className="text-subTitle_color">
-                            - {item.category}
-                          </span>
-                        </h4>
-                        <p className="mt-1">{item.text}</p>
-                      </div>
-                    </li>
-                  ))}
+                  {LocalTexts.about.skillsSection.skills?.map(
+                    (skill, index) => (
+                      <li className="mb-2" key={index}>
+                        <div>
+                          <h4 className="text-gray_300 text-lg capitalize">
+                            <span className="font-semibold">
+                              {LocalT.translate(skill.title)}
+                            </span>{" "}
+                            <span className="text-subTitle_color">
+                              {LocalT.translate(skill.category)}
+                            </span>
+                          </h4>
+                          <p className="mt-1">{LocalT.translate(skill.text)}</p>
+                        </div>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             )}
@@ -167,56 +86,58 @@ export const About = () => {
             {activeInx === 1 && (
               <div className="pane experience mt-8">
                 <ul className="flex flex-col">
-                  {aboutData[1].experience?.map((item, index) => (
-                    <li className="mb-5" key={index}>
-                      <div>
-                        <h4 className="text-gray_300 text-lg capitalize">
-                          <span className="font-semibold">{item.jobTitle}</span>{" "}
-                          <span className="text-subTitle_color">
-                            - {item.company}
-                          </span>
-                        </h4>
-                        <p className="mt-1">{item.year}</p>
-                      </div>
-                    </li>
-                  ))}
+                  {LocalTexts.about.experienceSection.experience?.map(
+                    (experience, index) => (
+                      <li className="mb-5" key={index}>
+                        <div>
+                          <h4 className="text-gray_300 text-lg capitalize">
+                            <span className="font-semibold">
+                              {LocalT.translate(experience.jobTitle)}
+                            </span>{" "}
+                            <span className="text-subTitle_color">
+                              - {LocalT.translate(experience.company)}
+                            </span>
+                          </h4>
+                          <p className="mt-1">
+                            {LocalT.translate(experience.year)}
+                          </p>
+                          <ul className="list-disc list-outside pl-4">
+                            {experience.achievements?.map((achievement) => (
+                              <li className="mt-1 mdw-2/4 ">
+                                {LocalT.translate(achievement)}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             )}
 
             {activeInx === 2 && (
               <div className="pane skills mt-8">
-                <ul className="grid gap-4 min-[400px]:grid-cols-2">
-                  {aboutData[2].contacts?.map((item, index) => (
-                    <li className="mb-5" key={index}>
-                      <div>
-                        <h4 className="text-gray_300 text-lg uppercase">
-                          <span className="font-semibold">{item.title}</span>{" "}
-                        </h4>
-                        <p className="mt-1">{item.content}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {activeInx === 3 && (
-              <div className="pane skills mt-8">
-                <ul className="">
-                  {aboutData[3].certificates?.map((item, index) => (
-                    <li className="mb-5" key={index}>
-                      <div>
-                        <h4 className="text-gray_300 text-lg">
-                          <span className="font-semibold">{item.subject}</span>{" "}
-                          <span className="text-subTitle_color">
-                            - {item.address}
-                          </span>
-                        </h4>
-                        <p className="mt-1">{item.year}</p>
-                      </div>
-                    </li>
-                  ))}
+                <ul>
+                  {LocalTexts.about.educationSection.education?.map(
+                    (education, index) => (
+                      <li className="mb-5" key={index}>
+                        <div>
+                          <h4 className="text-gray_300 text-lg">
+                            <span className="font-semibold">
+                              {LocalT.translate(education.subject)}
+                            </span>{" "}
+                            <span className="text-subTitle_color">
+                              - {LocalT.translate(education.address)}
+                            </span>
+                          </h4>
+                          <p className="mt-1">
+                            {LocalT.translate(education.year)}
+                          </p>
+                        </div>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             )}

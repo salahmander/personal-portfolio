@@ -1,0 +1,38 @@
+/* active nav links */
+
+.active {
+    font-weight: 700 !important;
+    -webkit-transform: scale(1.2) !important;
+    -ms-transform: scale(1.2) !important;
+    transform: scale(1.2) !important;
+    color: var(--primary-color) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .active {
+        padding-left: 10px;
+        -webkit-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
+/* =====================================================================
+    CONTACT CSS STYLES
+ =======================================================================*/
+
+.input {
+    padding: 10px 20px;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    outline: none;
+    border-radius: 20px;
+    -webkit-transition: outline 0.5s ease-in;
+    -o-transition: outline 0.5s ease-in;
+    transition: outline 0.5s ease-in;
+}
+
+.input:focus-within {
+    outline: 1px solid var(--primary-color)
+}

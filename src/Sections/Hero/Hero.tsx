@@ -1,5 +1,5 @@
 const expertise = [
-  "Front-End-Developer",
+  "Frontend Engineer",
   "Web Designer",
   "Freelancer",
   "Programmer",

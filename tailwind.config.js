@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary_color: "var(--primary-color)",
+        tertiary_color: "var(--tertiary_color)",
         bg_primary: "var(--bg-primary)",
         bg_secondary: "var(--bg-secondary)",
         bg_tertiary: "var(--bg-tertiary)",

@@ -23,6 +23,7 @@
 
 :root {
   --primary-color: #f2f2f2;
+  --tertiary-color: #ff13f0;
   --bg-primary: #161616;
   --bg-secondary: #262626;
   --bg-tertiary: #202020;
@@ -44,6 +45,7 @@
   --black-300: #1e1e1e;
   --black-200: #2a2a2a;
   --black-100: #353535;
+
 
   /* font */
 

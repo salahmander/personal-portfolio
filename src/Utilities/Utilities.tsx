@@ -34,12 +34,12 @@ export const navLinks: NavLinksType[] = [
 export const socialIcons: SocialIconsType[] = [
   {
     icon: <LinkedinIcon />,
-    url: "#",
+    url: "https://www.linkedin.com/in/salah-abdo/",
     title: "Linkedin",
   },
   {
     icon: <GitHubIcon />,
-    url: "#",
+    url: "https://github.com/salahmander",
     title: "GitHub",
   },
 ];

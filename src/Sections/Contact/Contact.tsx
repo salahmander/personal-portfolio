@@ -19,8 +19,7 @@ export const Contact = () => {
               visions.
             </p>
 
-            {/* social btns */}
-
+            {/* social buttons */}
             <ul className="social-icons contact-item mt-10 flex gap-5 items-center">
               {socialIcons.map((icon, index) => (
                 <li key={index} className="social-icon">

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { CrossIcon, MenuIcon } from "../../Utilities/Icons";
-import { navLinks } from "../../Utilities/Utilities";
+import { navLinks, ScrollTo } from "../../Utilities/Utilities";
 import { MobileNav } from "./MobileNavigation";
 
 export const Header = () => {
@@ -31,7 +31,7 @@ export const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`fixed h-12 top-0 left-0 w-full z-50 transition-all duration-500 ${
+        className={`fixed min-h-12 top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled && !toggle ? "bg-bg_secondary shadow-lg" : "bg-transparent"
         }`}
       >
@@ -41,9 +41,8 @@ export const Header = () => {
               {navLinks.map((link) => (
                 <li data-cursor="blow_link" key={link.title}>
                   <a
-                    // href={link.url}
                     className={`${link.title}-link text-gray_200 hover:text-xl hover:font-semibold transition-all duration-300 py-3 cursor-pointer`}
-                    onClick={() => console.log("click")}
+                    onClick={() => ScrollTo(link.url)}
                   >
                     {link.title}
                   </a>

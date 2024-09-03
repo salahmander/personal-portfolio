@@ -1,5 +1,5 @@
 import { CrossIcon, MenuIcon } from "../../Utilities/Icons";
-import { navLinks } from "../../Utilities/Utilities";
+import { navLinks, ScrollTo } from "../../Utilities/Utilities";
 
 type mobileNavProps = {
   toggle: boolean;
@@ -40,7 +40,7 @@ export const MobileNav = ({ toggle, handleToggle }: mobileNavProps) => {
                   <button
                     type="button"
                     className={`${link.title}-link transition-all duration-500 py-3 hover:pl-2.5 hover:text-primary_color`}
-                    onClick={() => console.log("click")}
+                    onClick={() => ScrollTo(link.url)}
                   >
                     {link.title}
                   </button>

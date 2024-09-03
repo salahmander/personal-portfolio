@@ -1,22 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { CrossIcon, MenuIcon } from "../../Utilities/Icons";
 import { navLinks } from "../../Utilities/Utilities";
 import { MobileNav } from "./MobileNavigation";
 
 export const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const headerRef = useRef<HTMLHeadElement | null>(null);
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className="header fixed top-0 left-0 w-full shadow-none border-b-black_100 border-none z-50 transition-all duration-500">
+      <header
+        ref={headerRef}
+        className={`fixed h-12 top-0 left-0 w-full z-50 transition-all duration-500 ${
+          scrolled && !toggle ? "bg-bg_secondary shadow-lg" : "bg-transparent"
+        }`}
+      >
         <div className={`container`}>
           <nav className="flex justify-between items-center py-3 px-paddingX">
-            {/* navlinks */}
-
             <ul className="hidden gap-5 items-center md:flex">
               {navLinks.map((link) => (
                 <li data-cursor="blow_link" key={link.title}>

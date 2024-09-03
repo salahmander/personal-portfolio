@@ -3,6 +3,7 @@ import { MDText } from "i18n-react";
 import HeroBackground from "../../assets/hero.webp";
 
 import LocalTexts from "./Hero.json";
+import { ScrollTo } from "../../Utilities/Utilities";
 
 const LocalT = new MDText(LocalTexts);
 
@@ -46,6 +47,11 @@ export const Hero = () => {
           <p className="text-white mt-5">
             {LocalT.translate("hero.description")}
           </p>
+          <div className="button">
+            <button className="bg-bg_secondary text-white mt-8 px-4 py-2 rounded-lg hover:bg-tertiary_color transition-colors duration-300" onClick={() => ScrollTo("#contact")}>
+            {LocalT.translate("hero.button")}
+            </button>
+          </div>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-bg_primary to-transparent"></div>

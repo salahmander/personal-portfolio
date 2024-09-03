@@ -1,22 +1,29 @@
+import { MDText } from "i18n-react";
+
 import { ContactForm } from "../../Components/ContactForm/ContactForm";
 import { SectionHeader } from "../../Components/SectionHeader/SectionHeader";
 import { SocialButton } from "../../Components/SocialButton/SocialButton";
 import { socialIcons } from "../../Utilities/Utilities";
 
+import LocalTexts from "./Contact.json";
+
+const LocalT = new MDText(LocalTexts);
+
 export const Contact = () => {
   return (
     <section id="contact" className="contact pt-section">
       <div className="container px-paddingX">
-        <SectionHeader shadowText="contact" title="Get In Touch" />
+        <SectionHeader
+          shadowText={LocalT.translate("contact.title") as string}
+          title={LocalT.translate("contact.subTitle") as string}
+        />
         <div className="flex gap-7 mt-14 min-[900px]:flex-row flex-col">
           <div className="left w-full min-[900px]:w-1/3">
             <h1 className="contact-item text-8xl font-semibold text-heading_color">
-              Let's work together
+              {LocalT.translate("contact.heading")}
             </h1>
             <p className="contact-item mt-5 max-w-lg">
-              Feel free to get in touch with me. I am always open to discussing
-              new projects, creative ideas or opportunities to be part of your
-              visions.
+              {LocalT.translate("contact.description")}
             </p>
 
             {/* social buttons */}

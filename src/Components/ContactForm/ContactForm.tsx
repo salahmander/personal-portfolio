@@ -1,6 +1,12 @@
+import { MDText } from "i18n-react";
+
 import { FormEvent, useState, ChangeEvent } from "react";
 import styles from "../../Sections/Contact/Contact.module.css";
 import { SubmitModal } from "../SubmitModal/SubmitModal";
+
+import LocalTexts from "../../Sections/Contact/Contact.json";
+
+const LocalT = new MDText(LocalTexts);
 
 export const ContactForm = () => {
   const [isOpen, setIsOpen] = useState<boolean | null>(null);
@@ -121,7 +127,14 @@ export const ContactForm = () => {
               ></textarea>
             </div>
 
-            <div className="button mt-6">Button</div>
+            <div className="button mt-6">
+              <button
+                className="bg-bg_secondary text-white px-4 py-2 rounded-lg hover:bg-tertiary_color transition-colors duration-300"
+                onClick={() => console.log("send")}
+              >
+                {LocalT.translate("contact.button")}
+              </button>
+            </div>
           </form>
         </div>
 

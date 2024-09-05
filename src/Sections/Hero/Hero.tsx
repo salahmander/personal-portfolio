@@ -48,13 +48,18 @@ export const Hero = () => {
             {LocalT.translate("hero.description")}
           </p>
           <div className="button">
-            <button className="bg-bg_secondary text-white mt-8 px-4 py-2 rounded-lg hover:bg-tertiary_color transition-colors duration-300" onClick={() => ScrollTo("#contact")}>
-            {LocalT.translate("hero.button")}
+            <button
+              type="button"
+              className="border mt-8 text-white px-4 py-2 rounded-lg hover:bg-primary_color transition-all duration-300 hover:text-black_500"
+              data-cursor="blow_link -pointer"
+              onClick={() => ScrollTo("#contact")}
+            >
+              {LocalT.translate("hero.button")}
             </button>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-bg_primary to-transparent"/>
+      <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-bg_primary to-transparent" />
     </div>
   );
 };

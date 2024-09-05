@@ -129,7 +129,9 @@ export const ContactForm = () => {
 
             <div className="button mt-6">
               <button
-                className="bg-bg_secondary text-white px-4 py-2 rounded-lg hover:bg-tertiary_color transition-colors duration-300"
+                type="button"
+                className="border text-white px-4 py-2 rounded-lg hover:bg-primary_color transition-all duration-300 hover:text-black_500"
+                data-cursor="blow_link -pointer"
                 onClick={() => console.log("send")}
               >
                 {LocalT.translate("contact.button")}
@@ -140,7 +142,7 @@ export const ContactForm = () => {
 
         {/* modal */}
 
-        <SubmitModal isOpen={isOpen} setIsOpen={setIsOpen} />
+        {isOpen && <SubmitModal setIsOpen={setIsOpen} />}
       </div>
     </section>
   );

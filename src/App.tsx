@@ -1,3 +1,5 @@
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 import { Footer } from "./Components/Footer/Footer";
 import { Header } from "./Components/Header/Header";
 import { About } from "./Sections/About/About";
@@ -14,6 +16,7 @@ const App = () => {
       <Portfolio />
       <Contact />
       <Footer />
+      <SpeedInsights />
     </div>
   );
 };

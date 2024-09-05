@@ -6,7 +6,7 @@ import { InfoCards } from "../../Components/InfoCards/InfoCards";
 import PersonalProjectImage from "../../assets/personalProjects.webp"
 import ChallengesExperiments from '../../assets/challengesExperiments.webp'
 import CommissionedWork from '../../assets/commissionedWork.webp'
-import WebsiteClones from '../../assets/WebsiteClones.webp'
+import WebsiteClones from '../../assets/websiteClones.webp'
 
 import LocalTexts from "./Portfolio.json";
 

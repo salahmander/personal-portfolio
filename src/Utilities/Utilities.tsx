@@ -85,3 +85,27 @@ export const ScrollTo = (url: string) => {
   requestAnimationFrame(animateScroll);
 };
 
+
+// Will be Used to create Portfolio pages
+export const ForEachPage = [
+  {
+    title: "Personal Projects",
+    description:
+      "Innovative Solutions, My Way: A collection of projects driven by passion and curiosity. Each one showcases unique problem-solving and creativity, highlighting my technical growth and personal interests.",
+  },
+  {
+    title: "Challenges & Experiments",
+    description:
+      "Exploration, Learning, and Problem-Solving: A dynamic mix of projects where I push boundaries, experiment with new technologies, and tackle coding puzzles. This section reflects my journey of continuous learning and creative exploration in various aspects of development.",
+  },
+  {
+    title: "Commissioned Work",
+    description:
+      "Professional Results, Real Impact: A showcase of tasks and projects completed for clients and businesses. This section highlights my ability to deliver high-quality work on time, tailored to meet specific needs and objectives.",
+  },
+  {
+    title: "Website Clones",
+    description:
+      "Reimagining the Web: Replicas of well-known websites, recreated to refine my skills and understand industry standards. These projects demonstrate my attention to detail and ability to replicate complex designs and functionalities.",
+  },
+];

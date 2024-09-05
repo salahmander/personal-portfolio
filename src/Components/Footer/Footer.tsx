@@ -7,6 +7,9 @@ import { CopyRightIcon } from "../../Utilities/Icons";
 const LocalT = new MDText(LocalTexts);
 
 export const Footer = () => {
+  
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="mt-10 bg-black_400">
       <div className={`container py-5 px-10 flex justify-center items-center`}>
@@ -14,7 +17,7 @@ export const Footer = () => {
           <span className="text-lg inline-block align-middle">
             <CopyRightIcon />
           </span>
-          {LocalT.translate("footer.copyright")}
+          {LocalT.translate("footer.copyright", { year: currentYear })}
         </p>
       </div>
     </footer>

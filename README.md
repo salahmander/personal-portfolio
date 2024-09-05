@@ -1,11 +1,15 @@
-# React + TypeScript + Vite
+# Salah's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my portfolio, containing everything you need to know about me. It was built using:
 
-Currently, two official plugins are available:
+- **React (Vite)**
+- **TypeScript**
+- **Tailwind CSS**
+- **React Router**
+- **Email.js**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project is deployed on **Vercel**. Feel free to explore and reach out through the contact form!
+
 
 ## Expanding the ESLint configuration
 

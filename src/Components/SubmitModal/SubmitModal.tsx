@@ -1,14 +1,19 @@
+import { MDText } from "i18n-react";
+
 import { SetStateAction, Dispatch } from "react";
 
+import LocalTexts from "./SubmitModal.json";
+
+const LocalT = new MDText(LocalTexts);
+
 type submitModalProps = {
-  isOpen: boolean | null;
   setIsOpen: Dispatch<SetStateAction<boolean | null>>;
 };
 
-export const SubmitModal = ({ isOpen, setIsOpen }: submitModalProps) => {
+export const SubmitModal = ({ setIsOpen }: submitModalProps) => {
   return (
     <div
-      className="submitModal fixed top-0 left-0 w-full h-full backdrop-blur-sm z-50 flex justify-center items-center invisible opacity-0 bg-bg_cover"
+      className="submitModal fixed top-0 left-0 w-full h-full backdrop-blur-sm z-50 flex justify-center items-center bg-bg_cover"
       onClick={() => setIsOpen(false)}
     >
       <div
@@ -16,11 +21,15 @@ export const SubmitModal = ({ isOpen, setIsOpen }: submitModalProps) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="overflow-hidden">
-          <h1 className="text-5xl md:text-6xl font-semibold">Thank You</h1>
+          <h1 className="text-5xl md:text-6xl font-semibold">
+            {LocalT.translate("submitModal.heading")}
+          </h1>
         </div>
 
         <div className="overflow-hidden">
-          <p className="mt-4 text-lg">I will get back to you soon.</p>
+          <p className="mt-4 text-lg">
+            {LocalT.translate("submitModal.description")}
+          </p>
         </div>
 
         <div className="btn mt-6">
@@ -30,7 +39,7 @@ export const SubmitModal = ({ isOpen, setIsOpen }: submitModalProps) => {
             data-cursor="blow_link -pointer"
             onClick={() => setIsOpen(false)}
           >
-            OK
+            {LocalT.translate("submitModal.button")}
           </button>
         </div>
       </div>

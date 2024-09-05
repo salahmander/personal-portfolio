@@ -8,9 +8,11 @@ const LocalT = new MDText(LocalTexts);
 
 type submitModalProps = {
   setIsOpen: Dispatch<SetStateAction<boolean | null>>;
+  isError: boolean;
 };
 
-export const SubmitModal = ({ setIsOpen }: submitModalProps) => {
+export const SubmitModal = ({ isError, setIsOpen }: submitModalProps) => {
+  const message = isError ? "failed" : "success"
   return (
     <div
       className="submitModal fixed top-0 left-0 w-full h-full backdrop-blur-sm z-50 flex justify-center items-center bg-bg_cover"
@@ -22,20 +24,20 @@ export const SubmitModal = ({ setIsOpen }: submitModalProps) => {
       >
         <div className="overflow-hidden">
           <h1 className="text-5xl md:text-6xl font-semibold">
-            {LocalT.translate("submitModal.heading")}
+            {LocalT.translate(`submitModal.${message}.heading`)}
           </h1>
         </div>
 
         <div className="overflow-hidden">
           <p className="mt-4 text-lg">
-            {LocalT.translate("submitModal.description")}
+          {LocalT.translate(`submitModal.${message}.description`)}
           </p>
         </div>
 
         <div className="btn mt-6">
           <button
             type="button"
-            className="border rounded-full font-semibold text-lg h-14 w-14 hover:bg-primary_color transition-all duration-300 hover:text-black_500"
+            className="border text-white px-4 py-2 rounded-lg hover:bg-primary_color transition-all duration-300 hover:text-black_500"
             data-cursor="blow_link -pointer"
             onClick={() => setIsOpen(false)}
           >
